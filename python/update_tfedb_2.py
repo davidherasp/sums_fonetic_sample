@@ -12,8 +12,10 @@ from cassiopeia.type.core.common import LoadPolicy
 
 logging.basicConfig(filename='update_tfedb_2.log', level=logging.INFO)
 
+riotapi.set_api_key("your API key")
 riotapi.set_load_policy(LoadPolicy.lazy)
 
+client = MongoClient("your connection")
 
 db = client.tfedb
 
